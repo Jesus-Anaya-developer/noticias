@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class FormularioComponent {
 
+  categoriaSeleccionada = 'general';
+  paisSeleccionado = 'mxn';
+
+  categorias: any[] = [
+    { value: 'general', nombre: 'General' },
+    { value: 'business', nombre: 'Negocios' },
+    { value: 'travel', nombre: 'turismo' },
+  ]
+
+  paises: any[] = [
+    { value: 'arg', nombre: 'Argentina' },
+    { value: 'mxn', nombre: 'Mexico' },
+    { value: 'bra', nombre: 'Brazil' },
+  ]
+
 }
