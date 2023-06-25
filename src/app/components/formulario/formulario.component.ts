@@ -22,4 +22,9 @@ export class FormularioComponent {
     { value: 'bra', nombre: 'Brazil' },
   ]
 
+  buscarNoticia() {
+    console.log(this.categoriaSeleccionada);
+    console.log(this.paisSeleccionado);
+  }
+
 }

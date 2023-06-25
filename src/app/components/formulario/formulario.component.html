@@ -2,25 +2,25 @@
   <h2 class="heading">Filtra noticias por pais y categoria</h2>
   <div class="row mt-3">
     <div class="col-lg-8 offset-lg-2">
-      <form>
+      <form (ngSubmit)="buscarNoticia()">
         <div class="form-group mt-3">
           <select name="categoria" [(ngModel)]="categoriaSeleccionada" class="form-select">
-            <option [value]="categorias.values" *ngFor="let item of categorias">
-              {{item.nombre}}
+            <option *ngFor="let categoria of categorias" [value]="categoria.value">
+              {{categoria.nombre}}
             </option>
           </select>
         </div>
         <div class="form-group mt-3">
           <select name="pais" [(ngModel)]="paisSeleccionado" class="form-select">
-            <option [value]="paises.values" *ngFor="let item of paises">
-              {{item.nombre}}
+            <option *ngFor="let pais of paises" [value]="pais.value">
+              {{pais.nombre}}
             </option>
           </select>
         </div>
+        <div class="d-grid gap-2 mt-5 mb-5">
+          <button type="submit" class="btn btn-lg bg-dark" data-bs-theme="dark">Buscar</button>
+        </div>
       </form>
-      <div class="d-grid gap-2 mt-5 mb-5">
-        <button class="btn btn-lg bg-dark" data-bs-theme="dark" type="button">Buscar</button>
-      </div>
     </div>
   </div>
 </div>
