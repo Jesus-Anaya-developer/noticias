@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
+import { AlertaMensajeComponent } from './shared/alerta-mensaje/alerta-mensaje.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from "@angular/common/http";
     FormularioComponent,
     ListadoNoticiasComponent,
     NavbarComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    AlertaMensajeComponent
   ],
   imports: [
     BrowserModule,

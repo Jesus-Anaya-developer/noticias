@@ -9,8 +9,8 @@ export class FormularioComponent {
 
   @Output() parametrosSeleccionador = new EventEmitter<any>();
 
-  categoriaSeleccionada = 'general';
-  paisSeleccionado = 'MX';
+  categoriaSeleccionada = 'technology';
+  paisSeleccionado = 'US';
 
   paises: any[] = [
     {

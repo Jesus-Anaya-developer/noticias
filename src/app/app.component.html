@@ -2,4 +2,7 @@
 <div class="container">
   <app-formulario (parametrosSeleccionador)="buscarNoticias($event)"></app-formulario>
   <app-listado-noticias [listNoticias]="listNoticias"></app-listado-noticias>
+  <app-alerta-mensaje *ngIf="alertaMensaje == true"></app-alerta-mensaje>
+  <app-spinner *ngIf="loading == true"></app-spinner>
+
 </div>

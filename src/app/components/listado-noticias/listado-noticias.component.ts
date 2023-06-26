@@ -9,4 +9,8 @@ export class ListadoNoticiasComponent {
 
   @Input() listNoticias: any;
 
+
+  constructor() {
+  }
+
 }
