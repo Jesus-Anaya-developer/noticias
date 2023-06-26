@@ -9,6 +9,8 @@ import { NoticiasService } from './services/noticias.service';
 export class AppComponent {
   title = 'noticias';
 
+  listNoticias: any[] = [];
+
   constructor(private _noticiaService: NoticiasService) {
 
   }
@@ -17,7 +19,10 @@ export class AppComponent {
     //se pasan los parametros al servicio y con .subscribe te retorna el resultado
     this._noticiaService.getNoticias(PARAMETROS).subscribe(data => {
       //con la arrow function obtienes los resultados de data
+      this.listNoticias = data.articles;
       console.log(data);
+    }, error => {
+      console.log(error);
     });
   }
 }
